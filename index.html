@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bintumani Young Stars | One Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #004080;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #0066cc;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+      color: orangered;
+    }
+    main {
+      padding: 20px;
+    }
+    section {
+      display: none;
+    }
+    section.active {
+      display: block;
+    }
+    footer {
+      background-color: #004080;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🏆 Bintumani Young Stars</h1>
+  </header>
+
+  <nav>
+    <a href="#home" data-target="home">Home</a>
+    <a href="#about" data-target="about">About</a>
+    <a href="#fixture" data-target="fixture">Fixture</a>
+    <a href="#players" data-target="players">Players</a>
+    <a href="#owners" data-target="owners">Owners</a>
+    <a href="#bio" data-target="bio">Bio</a>
+    <a href="#news" data-target="news">News</a>
+    <a href="#gallery" data-target="gallery">Gallery</a>
+    <a href="#contact" data-target="contact">Contact</a>
+  </nav>
+
+  <main>
+    <section id="home" class="active">
+      <h2>Welcome to Bintumani Young Stars FC</h2>
+      <p>Your home of passion, dreams, and football excellence from Koinadugu.</p>
+    </section>
+
+    <section id="about">
+      <h2>About Us</h2>
+      <p>
+Founded: 2017<br>
+Founder: Sadiku Sallieu Fofanah (Coach Kanayo)<br>
+Sole Sponsor: Mantenkelly Fofanah & Marie<br>
+Location: Koinadugu District, Northern Province, Sierra Leone<br>
+
+<strong>Our Story</strong><br>
+
+Bintumani Young Stars Football Club began its journey in 2017 under the leadership of Coach Kanayo (Sadiku Sallieu Fofanah). The club’s name evolved from Thankorosidia F.C., to Madina F.C., and then Mantenkelly F.C. Due to a law requiring community based organisations to avoid individual names, the club was officially renamed Bintumani Young Stars Football Club.<br>
+
+The current name was given by our club manager and sponsor, Mantenkelly Fofanah, with full support from his wife, Marie Fofanah. This dedicated couple has been the backbone of our club, providing sponsorship and unwavering support from day one.<br>
+
+
+<strong>Our Mission</strong><br>
+
+At Bintumani Young Stars, our mission is to:<br>
+
+<strong>Scout and develop young football talent</strong><br>
+
+<strong>Create opportunities on national and international stages</strong><br>
+
+<strong>Uplift young players from street life through sport</strong><br>
+
+<strong>Build discipline, confidence, and career pathways for youth</strong><br>
+
+We proudly serve as a home for many rising stars, building a future where talent is discovered, nurtured, and celebrated.</p>
+    </section>
+
+    <section id="fixture">
+      <h2>Fixture</h2>
+      <p>Upcoming games will be posted here. Stay tuned for our match calendar.</p>
+    </section>
+
+    <section class="player" id="players">
+      <h2>Players</h2>
+      <p>Meet our talented squad representing the best of young football in Sierra Leone.</p>
+      <img src="sadiku.jpg" alt="sadiku" style="width: 200px; height: 200px; border-radius: 50%; max-width: 100;">
+    </section>
+
+    <section id="owners">
+      <h2>Owners</h2>
+      <p>Owned and managed by a committed team from our local community.</p>
+    </section>
+
+    <section id="bio">
+      <h2>Club Biography</h2>
+      <p>From humble beginnings to a rising force, our club story is full of passion and growth.</p>
+    </section>
+
+    <section id="news">
+      <h2>Latest News</h2>
+      <p>Matchday updates, transfer news, and more from Bintumani Young Stars FC.</p>
+    </section>
+
+    <section id="gallery">
+      <h2>Gallery</h2>
+      <p>Photos and moments from matches, training, and community events.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>📞 Phone: +232 79667071 📧 Email: contact@bintumaniyoungstars.com</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Bintumani Young Stars. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const navLinks = document.querySelectorAll('nav a');
+    const sections = document.querySelectorAll('main section');
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('data-target');
+        sections.forEach(sec => sec.classList.remove('active'));
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+          targetSection.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
