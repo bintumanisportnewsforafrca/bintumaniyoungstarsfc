@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bintumani Young Stars | One Page</title>
   <style>
     body {
@@ -39,11 +40,56 @@
     section.active {
       display: block;
     }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    ul li a {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-weight: bold;
+      font-style: italic;
+      color: blue;
+      cursor: pointer;
+    }
+    ul li a:hover {
+      text-decoration: underline;
+      color: yellow;
+    }
+    img {
+      width: 100%;
+      max-width: 200px;
+      height: auto;
+      border-radius: 50%;
+      margin: 10px 0;
+    }
+    .table-container {
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+      background-color: black;
+      color: white;
+    }
+    table th, table td {
+      border: 1px solid white;
+      padding: 8px;
+    }
     footer {
       background-color: #004080;
       color: white;
       text-align: center;
       padding: 10px;
+    }
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 8px 0;
+      }
+      main {
+        padding: 10px;
+      }
     }
   </style>
 </head>
@@ -73,83 +119,77 @@
 
     <section id="about">
       <h2>About Us</h2>
-      <article>
-        <p>
-Founded: 2017<br>
-Founder: Sadiku Sallieu Fofanah (Coach Kanayo)<br>
-Sole Sponsor: Mantenkelly Fofanah & Marie<br>
-Location: Koinadugu District, Northern Province, Sierra Leone<br><br>
+      <p>
+        Founded: 2017<br>
+        Founder: Sadiku Sallieu Fofanah (Coach Kanayo)<br>
+        Sole Sponsor: Mantenkelly Fofanah & Marie<br>
+        Location: Koinadugu District, Northern Province, Sierra Leone<br><br>
 
-<strong>Our Story</strong><br>
+        <strong>Our Story</strong><br>
+        Bintumani Young Stars Football Club began its journey in 2017 under the leadership of Coach Kanayo. The name evolved from Thankorosidia F.C., to Madina F.C., and then Mantenkelly F.C. It was later changed to Bintumani Young Stars due to legal requirements on community club names.
 
-Bintumani Young Stars Football Club began its journey in 2017 under the leadership of Coach Kanayo (Sadiku Sallieu Fofanah). The club’s name evolved from Thankorosidia F.C., to Madina F.C., and then Mantenkelly F.C. Due to a law requiring community based organisations to avoid individual names, the club was officially renamed Bintumani Young Stars Football Club.<br>
-
-The current name was given by our club manager and sponsor, Mantenkelly Fofanah, with full support from his wife, Marie Fofanah. This dedicated couple has been the backbone of our club, providing sponsorship and unwavering support from day one.<br>
-
-
-<strong>Our Mission</strong><br>
-
-At Bintumani Young Stars, our mission is to:<br>
-
-<strong>Scout and develop young football talent</strong><br>
-
-<strong>Create opportunities on national and international stages</strong><br>
-
-<strong>Uplift young players from street life through sport</strong><br>
-
-<strong>Build discipline, confidence, and career pathways for youth</strong><br>
-
-We proudly serve as a home for many rising stars, building a future where talent is discovered, nurtured, and celebrated.</p>
-      </article>
+        <br><br><strong>Our Mission</strong><br>
+        <ul>
+          <li>Scout and develop young football talent</li>
+          <li>Create opportunities on national and international stages</li>
+          <li>Uplift young players from street life through sport</li>
+          <li>Build discipline, confidence, and career pathways</li>
+        </ul>
+      </p>
     </section>
 
     <section id="fixture">
       <h2>Fixture</h2>
-      <p>Upcoming games will be posted here. This is just a temple of how it will look. Stay tuned for our match calendar.</p>
-      <table border="2" style="width: 100%; border-collapse: collapse; padding: 10px; text-align: center; background-color: black; color: white;">
-        <tr>
-          <th>HOME TEAM</th>
-          <th>V/S</th>
-          <th>AWAY TEAM</th>
-          <th>DATE</th>
-          <th>VENUE</th>
-        </tr>
-        <tr>
-          <td>bintumani</td>
-          <td>vs</td>
-          <td>kabala</td>
-          <td>28/02/26</td>
-          <td>yogomaia</td>
-        </tr>
-       
-      </table>
+      <div class="table-container">
+        <table>
+          <tr>
+            <th>HOME TEAM</th>
+            <th>V/S</th>
+            <th>AWAY TEAM</th>
+            <th>DATE</th>
+            <th>VENUE</th>
+          </tr>
+          <tr>
+            <td>Bintumani</td>
+            <td>vs</td>
+            <td>Kabala</td>
+            <td>28/02/26</td>
+            <td>Yogomaia</td>
+          </tr>
+        </table>
+      </div>
     </section>
 
     <section id="players">
       <h2>Players</h2>
-      <p>Our Players photo, names, age, position and contract will be posted here.</p>
-      <img src="sadiku.jpg" alt="sadiku" style="width: 200px; height: 200px; border-radius: 50%; max-width: 100;">
+      <p>Our players’ photos, names, age, position and contract will be posted here. For the main time this sample</p>
+      <img src="sadiku.jpg" alt="sadiku">
+      <img src="kanayo.jpg" alt="kanayo">
     </section>
+
     <section id="coaches">
       <h2>Coaches</h2>
-      <p>All our coaching staff Biography and photo will be posted here.</p>
-      <img src="#" alt="Saio" style="width: 200px; height: 200px; border-radius: 50%; max-width: 100;">
+      <p>All our coaching staff biography and photos will be posted here.</p>
+      <img src="#" alt="Saio">
     </section>
 
     <section id="owners">
       <h2>Owners</h2>
-      <strong> <p>The club is run and own by:</p></strong>
-      <P>Mantenkelly fofanah</P>
-      <P>Marie Jose</P>
-      <P>Sadiku Sallieu Fofanah</P>
-      <P>Saio Marah</P>
-      <P>Yarie Fofana</P>
-      The above names Biography will be updated here
+      <p>The club is run and owned by:</p>
+      <ul>
+        <li><a onclick="showBio('mantenkelly')">Mantenkelly Fofanah</a></li>
+        <li><a onclick="showBio('marie')">Marie Jose</a></li>
+        <li><a onclick="showBio('kanayo')">Sadiku Sallieu Fofanah (Coach Kanayo)</a></li>
+        <li><a onclick="showBio('saio')">Saio Marah</a></li>
+        <li><a onclick="showBio('yarie')">Yarie Fofanah</a></li>
+      </ul>
     </section>
 
     <section id="bio">
-      <h2>Club Biography</h2>
-      <p>From humble beginnings to a rising force, our club story is full of passion and growth.</p>
+      <h2>Biography</h2>
+      <div id="bio-content">
+        <p>From humble beginnings to a rising force, our club story is full of passion and growth.</p>
+      </div>
     </section>
 
     <section id="news">
@@ -164,7 +204,7 @@ We proudly serve as a home for many rising stars, building a future where talent
 
     <section id="contact">
       <h2>Contact Us</h2>
-      <p>📞 Phone: +31684235271/+23279667071 📧 Email:?</p>
+      <p>📞 Phone: +31684235271 / +23279667071 <br> 📧 Email: info@bintumanistars.com</p>
     </section>
   </main>
 
@@ -173,6 +213,7 @@ We proudly serve as a home for many rising stars, building a future where talent
   </footer>
 
   <script>
+    // Navigation
     const navLinks = document.querySelectorAll('nav a');
     const sections = document.querySelectorAll('main section');
 
@@ -187,6 +228,26 @@ We proudly serve as a home for many rising stars, building a future where talent
         }
       });
     });
+
+    // Owner bios
+    function showBio(owner) {
+      let bioText = '';
+      if (owner === 'kanayo') {
+        bioText = `<h3>Sadiku Sallieu Fofanah (Coach Kanayo)</h3>
+        <p>Founder and current coach of the club. A dedicated football mentor and visionary who started the club to support local talent in Koinadugu.</p>`;
+      } else if (owner === 'mantenkelly') {
+        bioText = `<h3>Mantenkelly Fofanah</h3>
+        <p>Main sponsor and manager of the club. He named the club and has consistently provided financial support and guidance since its formation.</p>`;
+      } else if (owner === 'marie') {
+        bioText = `<h3>Marie Fofanah</h3>
+        <p>Co-sponsor and supporter of the club’s mission. Marie works alongside her husband to keep the club running smoothly and supports all activities.</p>`;
+      }
+
+      document.querySelectorAll('main section').forEach(sec => sec.classList.remove('active'));
+      const bioSection = document.getElementById('bio');
+      bioSection.classList.add('active');
+      document.getElementById('bio-content').innerHTML = bioText;
+    }
   </script>
 </body>
 </html>
