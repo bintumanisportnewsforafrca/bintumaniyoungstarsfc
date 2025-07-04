@@ -194,7 +194,7 @@
 
     <section id="news">
       <h2>Latest News</h2>
-      
+      <!-- You can add news content here -->
     </section>
 
     <section id="gallery">
@@ -227,6 +227,18 @@
           targetSection.classList.add('active');
         }
       });
+    });
+
+    // Auto-show section if coming from direct link like #news
+    window.addEventListener("load", () => {
+      const hash = window.location.hash.replace("#", "");
+      if (hash) {
+        sections.forEach(sec => sec.classList.remove("active"));
+        const targetSection = document.getElementById(hash);
+        if (targetSection) {
+          targetSection.classList.add("active");
+        }
+      }
     });
 
     // Owner bios
