@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bintumani Young Stars | One Page</title>
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -113,7 +116,7 @@
 
   <main>
     <section id="home" class="active">
-      <h2>Welcome to Bintumani Young Stars Football club Official Website</h2>
+      <h2>Welcome to Bintumani Young Stars Football Club Official Website</h2>
       <p>Your home of passion, dreams, and football excellence from Koinadugu.</p>
     </section>
 
@@ -126,7 +129,9 @@
         Location: Koinadugu District, Northern Province, Sierra Leone<br><br>
 
         <strong>Our Story</strong><br>
-        Bintumani Young Stars Football Club began its journey in 2017 under the leadership of Coach Kanayo. The name evolved from Thankorosidia F.C., to Madina F.C., and then Mantenkelly F.C. It was later changed to Bintumani Young Stars due to legal requirements on community club names.
+        Bintumani Young Stars Football Club began its journey in 2017 under the leadership of Coach Kanayo.
+        The name evolved from Thankorosidia F.C., to Madina F.C., and then Mantenkelly F.C.
+        It was later changed to Bintumani Young Stars due to legal requirements on community club names.
 
         <br><br><strong>Our Mission</strong><br>
         <ul>
@@ -162,7 +167,7 @@
 
     <section id="players">
       <h2>Players</h2>
-      <p>Our players’ photos, names, age, position and contract will be posted here. For the main time this sample</p>
+      <p>Our players’ photos, names, age, position and contract will be posted here.</p>
       <img src="sadiku.jpg" alt="sadiku">
       <img src="kanayo.jpg" alt="kanayo">
     </section>
@@ -194,7 +199,30 @@
 
     <section id="news">
       <h2>Latest News</h2>
-      <!-- You can add news content here -->
+
+      <article class="news" id="post1">
+  <h3>🎓 Mantenkelly Set to Face Kabala City Jr in End-of-School Friendly</h3>
+  <p><em>July 18, 2025</em></p>
+
+  <p>
+    As the school bells ring for the final time this term, our boys aren’t just closing their books—they’re lacing up their boots! 📚⚽<br><br>
+
+    On <strong>Friday, July 18th, 2025</strong>, the promising young talents of <strong>Mantenkelly</strong> will go head-to-head with the vibrant and skillful side of <strong>Kabala City jr</strong> in a thrilling friendly match to mark the official close of the school year in Kabala. 🎓✨
+  </p>
+  <img src="mantenkelly.jpg" alt="Mantenkelly">
+
+  <p>
+    This friendly is more than just a game it’s a celebration of youthful energy, community spirit, and football passion. Organized for fun and unity, the fixture will allow fans, parents, and students to enjoy an evening of entertainment, togetherness, and talent.
+  </p>
+  <img src="kabala city.jpg" alt="Kabala City">
+
+  <p>
+    With both teams boasting strong school-year performances and gifted players, the match promises excitement, goals, and great sportsmanship. 🥅🔥<br><br>
+
+    We invite everyone in Kabala to come witness the next generation of football stars. Let’s close the school term with joy, cheers, and a football showdown to remember! 🎉
+  </p>
+</article>
+
     </section>
 
     <section id="gallery">
@@ -229,19 +257,24 @@
       });
     });
 
-    // Auto-show section if coming from direct link like #news
+    // Show specific post if linked directly
     window.addEventListener("load", () => {
       const hash = window.location.hash.replace("#", "");
       if (hash) {
-        sections.forEach(sec => sec.classList.remove("active"));
-        const targetSection = document.getElementById(hash);
-        if (targetSection) {
-          targetSection.classList.add("active");
+        const postElement = document.getElementById(hash);
+        if (postElement) {
+          // Show news section only
+          sections.forEach(sec => sec.classList.remove("active"));
+          document.getElementById("news").classList.add("active");
+          // Scroll to the post smoothly
+          setTimeout(() => {
+            postElement.scrollIntoView({ behavior: "smooth" });
+          }, 100);
         }
       }
     });
 
-    // Owner bios
+    // Show biography
     function showBio(owner) {
       let bioText = '';
       if (owner === 'kanayo') {
@@ -255,10 +288,10 @@
         <p>Co-sponsor and supporter of the club’s mission. Marie works alongside her husband to keep the club running smoothly and supports all activities.</p>`;
       } else if (owner === 'saio') {
         bioText = `<h3>Saio Marah</h3>
-        <p>He is the head coach of the club presently, he became owner due to his contribution toward the club, in and out side of the pitch.</p>`;
+        <p>He is the head coach of the club presently. He became an owner due to his contributions on and off the pitch.</p>`;
       } else if (owner === 'yarie') {
         bioText = `<h3>Yarie Fofaanah</h3>
-        <p>The iron Lady of the club, she was there since the beginning of the club we started the struggle together.</p>`;
+        <p>The Iron Lady of the club, she was there from the very beginning, standing strong through the journey.</p>`;
       }
 
       document.querySelectorAll('main section').forEach(sec => sec.classList.remove('active'));
